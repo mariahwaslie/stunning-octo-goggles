@@ -40,15 +40,15 @@ def compute_cost(medoids, data,x_medoid_assignment):
         cost = compute(points, medoids[k])
         if len(points)==0:
              continue
-        # check C(m) vs C(o)
-        
+        # cfor each point check C(m) vs C(o)
         costs = cdist(points, points, metric='euclidean') 
         all_possible_costs = np.sum(costs , axis=0)
 
         # find min cost and reassign medoids 
         min_idx = np.argmin(all_possible_costs)
         medoids[k] = points[min_idx]
-        # cost= all_possible_costs[min_idx]
+        
+        # cost_medoids = all_possible_costs by memdoid
         cost_medoids[k] = all_possible_costs[min_idx]
         
         # reassign data points based on new medoids 
