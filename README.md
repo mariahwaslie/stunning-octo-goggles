@@ -85,10 +85,3 @@ python -m venv .venv
 source .venv/bin/activate
 pip install numpy pandas matplotlib seaborn scikit-learn scipy plotly nbformat kagglehub umap-learn lightgbm jupyter
 ```
-
-## Notes
-
-- The project does not currently include a `requirements.txt` or environment file.
-- The K-Medoids implementation uses a fixed random seed in the helper module for repeatable medoid initialization.
-- `mall_customer.ipynb` requires `Mall_Customers.csv`, which is not present in this repository.
-- Generated `__pycache__` folders are present in the workspace but are ignored by Git.
