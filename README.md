@@ -31,12 +31,14 @@ The goal of this project is not only to use machine learning algorithms, but to 
 │   ├── k_medoids_scratch.ipynb
 │   └── plots.py
 ├── k-means/
+│   ├── Mall_Customers.csv
 │   ├── Mother Genome.csv
 │   ├── functions.py
 │   ├── genome.ipynb
 │   └── mall_customer.ipynb
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -67,10 +69,11 @@ Key concepts explored:
 
 Contains K-Means clustering experiments and visualization helpers.
 
+* `Mall_Customers.csv`: Mall customer segmentation dataset with customer ID, gender, age, annual income, and spending score columns.
 * `Mother Genome.csv`: Genome dataset with rsid, chromosome, position, and genotype columns.
 * `functions.py`: Visualization helpers for histogram and bar plots using Matplotlib and Seaborn.
 * `genome.ipynb`: Loads genome data, performs preprocessing and feature engineering, applies K-Means clustering, evaluates cluster counts using elbow plots, and visualizes clusters with PCA.
-* `mall_customer.ipynb`: Performs K-Means clustering on mall customer data. It label-encodes gender, scales features, evaluates cluster counts using elbow and silhouette methods, and visualizes clustering results using PCA, t-SNE, heatmaps, and pair plots.
+* `mall_customer.ipynb`: Loads `Mall_Customers.csv` and performs K-Means clustering on mall customer data. It label-encodes gender, scales features, evaluates cluster counts using elbow and silhouette methods, and visualizes clustering results using PCA, t-SNE, heatmaps, and pair plots.
 
 Key concepts explored:
 
@@ -81,7 +84,6 @@ Key concepts explored:
 * PCA and t-SNE visualization
 * Real-world clustering analysis
 
-> Note: `Mall_Customers.csv` is referenced by the notebook but is not currently included in the repository.
 
 ---
 
@@ -144,7 +146,7 @@ Example environment setup:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install numpy pandas matplotlib seaborn scikit-learn scipy plotly nbformat kagglehub umap-learn lightgbm jupyter
+pip install -r requirements.txt
 ```
 
 ---

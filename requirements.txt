@@ -1,0 +1,12 @@
+jupyter
+kagglehub
+lightgbm
+matplotlib
+nbformat
+numpy
+pandas
+plotly
+scikit-learn
+scipy
+seaborn
+umap-learn
